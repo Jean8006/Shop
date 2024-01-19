@@ -22,4 +22,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('',include('web.urls')), #cuando entremos a la aplicacion me trae los urls de la aplicacion web
     path('admin/', admin.site.urls),
+    path('paypal/', include("paypal.standard.ipn.urls"))
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

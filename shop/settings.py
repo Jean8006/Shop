@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'web',
+    'paypal.standard.ipn',
     'django_admin_tailwind',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -132,3 +133,11 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+PAYPAL_TEST = True
+
+#para enviar correo reales hay que manejar estos datos pero con dominio propio etc
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '0fd888d07f9713'
+EMAIL_HOST_PASSWORD = 'c24487b85e4f73'
+EMAIL_PORT = '2525'
